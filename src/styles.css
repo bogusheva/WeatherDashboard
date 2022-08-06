@@ -1,0 +1,126 @@
+body,
+div {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+}
+.row,
+.col,
+.col-4,
+.col-8 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  border: 3px solid blue;
+  box-shadow: 0 5px 10px rgb(64, 187, 228);
+}
+
+.forecast-wrapper {
+  border: 2px dotted rgb(64, 187, 228);
+}
+.temperature-description {
+  height: 72px;
+  font-size: 3.8em;
+  font-weight: 900;
+  border: 2px dotted rgb(64, 187, 228);
+  text-align: center;
+}
+.current-city {
+  font-size: 2em;
+  font-weight: 700;
+}
+.current-date {
+  font-size: 1.5em;
+  font-weight: 500;
+  font-style: italic;
+}
+.main-image {
+  width: 58px;
+  display: inline-block;
+}
+.weather-container {
+  text-align: center;
+  align-items: flex-end;
+}
+.weather-description {
+  font-size: 2.7em;
+  font-weight: 900;
+  line-height: 2.2;
+  display: inline-block;
+  height: 68px;
+  text-transform: capitalize;
+}
+.detailed-list {
+  margin: 0;
+  padding: 5px 0 0 20px;
+  list-style: none;
+  text-align: left;
+  font-style: italic;
+}
+.citate {
+  font-size: 1.4em;
+  line-height: 1.3;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-weight: 500;
+  text-align: right;
+  padding: 0 0px 0 10px;
+  margin: 10px 0 0 5px;
+}
+.day-name,
+.day-temperature {
+  font-weight: 600;
+  text-align: center;
+}
+.small-icons {
+  width: 24px;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+}
+.form-label {
+  padding: 5px 0 0 0;
+  font-weight: 600;
+  margin: 0;
+}
+.btn {
+  display: block;
+  border: 1px solid blue;
+  padding: 0;
+  width: 60%;
+  margin: 7px auto 2px;
+}
+.search-panel {
+  padding: 0 0 0 20px;
+}
+.search-text {
+  margin: 5px 0 0 0;
+  padding: 0 0 0 5px;
+  font-weight: 600;
+}
+.search-city-1,
+.search-city-2,
+.search-city-3,
+.search-city-4 {
+  padding: 0 0 0 30px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 0.7em;
+  font-weight: 600;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  margin: 10px 0 0 0;
+}
+.copyright-icon {
+  width: 40px;
+}
+
+#fahrenheit-symbol,
+#celsius-symbol {
+  font-size: 28px;
+  color: black;
+  text-decoration: none;
+}
