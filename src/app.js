@@ -22,13 +22,18 @@ function formatDate(arg) {
 }
 function changeToFahrenheit(event) {
   event.preventDefault();
-  let temperatureValue = document.querySelector("#current-temperature");
-  temperatureValue.innerHTML = 79;
+  let temperatureElement = document.querySelector("#current-temperature");
+  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = fahrenheitTemperature;
+  celsiusDegree.classList.remove("active");
+  fahrenheitDegree.classList.add("active");
 }
 function changeToCelsius(event) {
   event.preventDefault();
   let temperatureValue = document.querySelector("#current-temperature");
-  temperatureValue.innerHTML = 26;
+  temperatureValue.innerHTML = celsiusTemperature;
+  celsiusDegree.classList.add("active");
+  fahrenheitDegree.classList.remove("active");
 }
 
 function searchCity(event) {
@@ -46,8 +51,9 @@ function searchCity(event) {
 }
 
 function showWeather(response) {
+  celsiusTemperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#current-temperature");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = celsiusTemperature;
   let cityElement = document.querySelector(".current-city");
   cityElement.innerHTML = response.data.name;
   cityElement.style.fontSize = "24px";
@@ -60,7 +66,6 @@ function showWeather(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   if (descriptionElement.innerHTML.length >= 10) {
     descriptionElement.style.fontSize = "25px";
-    descriptionElement.style.marginTop = "10px";
   }
   let windElement = document.querySelector("#wind-value");
   windElement.innerHTML = response.data.wind.speed.toFixed(1);
@@ -111,7 +116,7 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(findPosition);
 }
 
-function cleanValue() {
+function cleanValue(event) {
   let inputForm = document.querySelector("#search-city");
   inputForm.value = "";
 }
@@ -120,6 +125,7 @@ let apiKey = "f97f8eaebc5efe3fd907c0565c3a9148";
 let currentDate = new Date();
 let currentDateView = document.querySelector(".current-date");
 currentDateView.innerHTML = formatDate(currentDate);
+let celsiusTemperature = null;
 let searchForm = document.querySelector("#search-city-form");
 searchForm.addEventListener("submit", searchCity);
 let inputForm = document.querySelector("#search-city");

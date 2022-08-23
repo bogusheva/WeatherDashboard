@@ -34,17 +34,25 @@ div {
   margin: 5px 10px;
 }
 .temperature-description {
-  /*margin: 10px;*/
   font-size: 1em;
 }
 .weather-description-img {
-  width: 58px;
+  width: 68px;
 }
 .weather-description-text {
   font-size: 1em;
 }
 .weather-description-text::first-letter {
   text-transform: capitalize;
+}
+.temperature-description .active {
+  color: black;
+  cursor: default;
+}
+.units {
+  font-size: 0.5em;
+  position: relative;
+  top: -12px;
 }
 .forecast-wrapper {
   border: 2px dotted rgb(64, 187, 228);
@@ -115,15 +123,6 @@ div {
   font-weight: 600;
 }
 
-.search-city-1,
-.search-city-2,
-.search-city-3,
-.search-city-4 {
-  padding: 0 0 0 30px;
-  font-style: italic;
-  text-decoration: underline;
-}
-
 .copyright {
   font-size: 0.7em;
   font-weight: 600;
@@ -131,6 +130,7 @@ div {
   margin: 10px auto;
   padding: 0;
   text-align: start;
+  line-height: 0.9;
 }
 .copyright p {
   margin: 0;
@@ -145,11 +145,7 @@ div {
 
 #fahrenheit-symbol,
 #celsius-symbol {
-  font-size: 0.5em;
-  color: black;
   text-decoration: none;
-  position: relative;
-  top: -12px;
 }
 
 @media screen and (max-width: 499px) {

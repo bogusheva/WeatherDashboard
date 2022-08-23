@@ -32,7 +32,7 @@
             <div class="col-7 main-info-block">
               <div class="cold-flex temperature-description">
                 <img src="/images/cloudy-512.png" class="weather-description-img" id="big-icon" />
-                <span id="current-temperature">26</span><a href="#" id="celsius-symbol">°C|</a><a href="#" id="fahrenheit-symbol">°F</a>
+                <span id="current-temperature">26</span><span class="units"><a href="#" id="celsius-symbol" class="active">°C</a>|<a href="#" id="fahrenheit-symbol">°F</a></span>
               </div>
               <div class="weather-description-text">
                 Rainy
@@ -46,6 +46,7 @@
                   list="datalistOptions"
                   id="search-city"
                   placeholder="enter the city..."
+                  autocomplete="off"
                 />
                 <input type="submit" value="Search" class="form control btn btn-primary"/>
                 <button type="button" class="btn btn-success" id="current-button">Current</button>
@@ -59,9 +60,9 @@
           </div>
             <div class="col-5 detailed-description">
               <ul class="detailed-list">
-                <li>wind: <span id="wind-value">4</span> km/h</li>
+                <li>wind: <span id="wind-value">2</span> km/h</li>
                 <li>humidity: <span id="humidity-value">70</span>%</li>
-                <li>pressure: <span id="pressure-value">100</span> mm.Hg</li>
+                <li>pressure: <span id="pressure-value">760</span> mm.Hg</li>
               </ul>
             </div>
             <div class="col-3 copyright">
