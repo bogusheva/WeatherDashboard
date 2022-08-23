@@ -41,6 +41,8 @@ div {
 }
 .weather-description-text {
   font-size: 1em;
+  padding: 0 0 5px 0;
+  line-height: 1em;
 }
 .weather-description-text::first-letter {
   text-transform: capitalize;
@@ -151,7 +153,8 @@ div {
 @media screen and (max-width: 499px) {
   body,
   div,
-  .btn {
+  .btn,
+  .units {
     font-size: 10px;
   }
   .weather-description {
@@ -168,21 +171,9 @@ div {
   .main-image {
     width: 35px;
   }
-  #fahrenheit-symbol,
-  #celsius-symbol {
-    font-size: 0.5em;
-  }
 }
 
 .my-git-hub {
   margin: 30px auto 10px;
   text-align: center;
-}
-.btn-git-hub {
-  background-color: rgb(194, 222, 240);
-  border: 1px solid blue;
-  font-size: 10px;
-  padding: 5px 10px;
-  width: 100px;
-  border-radius: 20px;
 }
