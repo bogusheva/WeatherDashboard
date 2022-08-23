@@ -12,73 +12,88 @@ div {
   padding: 0;
   box-sizing: border-box;
 }
+
 .container {
+  max-width: 500px;
+}
+.container-wrapper {
   border: 3px solid blue;
   box-shadow: 0 5px 10px rgb(64, 187, 228);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7) 0 100%),
+    url(https://media.istockphoto.com/photos/blue-sky-background-and-white-clouds-soft-focus-and-copy-space-picture-id1128410927?k=20&m=1128410927&s=612x612&w=0&h=6d_L7Fxea-KaLzuEGIm7n1IbkRLwy9pNRVOlByPuDLg=);
+  background-size: cover;
 }
-
-.forecast-wrapper {
-  border: 2px dotted rgb(64, 187, 228);
-}
-.temperature-description {
-  height: 72px;
-  font-size: 3.8em;
+.main-info-block {
+  height: 120px;
+  font-size: 3em;
   font-weight: 900;
   border: 2px dotted rgb(64, 187, 228);
   text-align: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 10px;
+}
+.temperature-description {
+  /*margin: 10px;*/
+  font-size: 1em;
+}
+.weather-description-img {
+  width: 58px;
+}
+.weather-description-text {
+  font-size: 1em;
+}
+.weather-description-text::first-letter {
+  text-transform: capitalize;
+}
+.forecast-wrapper {
+  border: 2px dotted rgb(64, 187, 228);
+}
+.current-city-date {
+  padding: 0 5px 0 15px;
 }
 .current-city {
   font-size: 2em;
   font-weight: 700;
+  font-style: italic;
 }
 .current-date {
   font-size: 1.5em;
   font-weight: 500;
   font-style: italic;
 }
-.main-image {
-  width: 58px;
-  display: inline-block;
-}
-.weather-container {
-  text-align: center;
-  align-items: flex-end;
-}
-.weather-description {
-  font-size: 2.7em;
-  font-weight: 900;
-  line-height: 2.2;
-  display: inline-block;
-  height: 68px;
-  text-transform: capitalize;
-}
+
 .detailed-list {
   margin: 0;
-  padding: 5px 0 0 20px;
+  padding: 5px 0 0;
   list-style: none;
   text-align: left;
   font-style: italic;
 }
+
 .citate {
   font-size: 1.4em;
   line-height: 1.3;
   font-family: "Edu VIC WA NT Beginner", cursive;
   font-weight: 500;
   text-align: right;
-  padding: 0 0px 0 10px;
+  padding: 0 5px 0 10px;
   margin: 10px 0 0 5px;
 }
+
 .day-name,
 .day-temperature {
   font-weight: 600;
   text-align: center;
 }
+
 .small-icons {
   width: 24px;
   padding: 0;
   margin: 0 auto;
   display: block;
 }
+
 .form-label {
   padding: 5px 0 0 0;
   font-weight: 600;
@@ -99,6 +114,7 @@ div {
   padding: 0 0 0 5px;
   font-weight: 600;
 }
+
 .search-city-1,
 .search-city-2,
 .search-city-3,
@@ -112,17 +128,54 @@ div {
   font-size: 0.7em;
   font-weight: 600;
   font-family: "Edu VIC WA NT Beginner", cursive;
-  margin: 10px 0 0 0;
+  margin: 10px auto;
+  padding: 0;
+  text-align: start;
+}
+.copyright p {
+  margin: 0;
 }
 .copyright-icon {
   width: 40px;
 }
 
+#search-city {
+  font-size: 0.8em;
+}
+
 #fahrenheit-symbol,
 #celsius-symbol {
-  font-size: 28px;
+  font-size: 0.5em;
   color: black;
   text-decoration: none;
+  position: relative;
+  top: -12px;
+}
+
+@media screen and (max-width: 499px) {
+  body,
+  div,
+  .btn {
+    font-size: 10px;
+  }
+  .weather-description {
+    font-size: 2em;
+    line-height: 1em;
+  }
+  .search-text {
+    margin: 25px 0 0 0;
+  }
+  .copyright {
+    font-size: 0.5em;
+    margin: 30px 0 0 0;
+  }
+  .main-image {
+    width: 35px;
+  }
+  #fahrenheit-symbol,
+  #celsius-symbol {
+    font-size: 0.5em;
+  }
 }
 
 .my-git-hub {
