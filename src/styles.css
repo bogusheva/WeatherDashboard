@@ -60,7 +60,7 @@ div {
   border: 2px dotted rgb(64, 187, 228);
   margin: 0 2px 2px;
   padding: 1px;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .weather-forecast-date {
   align-items: center;
@@ -173,7 +173,7 @@ div {
   div,
   .btn,
   .units {
-    font-size: 10px;
+    font-size: 9px;
   }
   .weather-description {
     font-size: 2em;
@@ -183,7 +183,7 @@ div {
     margin: 25px 0 0 0;
   }
   .forecast-wrapper {
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .copyright {
     font-size: 0.5em;
