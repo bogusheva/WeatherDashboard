@@ -3,8 +3,8 @@
   <head>
     <title>Homework2</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,103 +29,76 @@
     <div class="container">
       <div class="container-wrapper">
         <div class="row">
-            <div class="col-7 main-info-block">
-              <div class="cold-flex temperature-description">
-                <img src="/images/cloudy-512.png" class="weather-description-img" id="big-icon" />
-                <span id="current-temperature">26</span><span class="units"><a href="#" id="celsius-symbol" class="active">°C</a>|<a href="#" id="fahrenheit-symbol">°F</a></span>
-              </div>
-              <div class="weather-description-text">
-                Rainy
-              </div>
+          <div class="col-7 main-info-block">
+            <div class="cold-flex temperature-description">
+              <img src="" class="weather-description-img" id="big-icon" />
+              <span id="current-temperature"></span
+              ><span class="units"
+                ><a href="#" id="celsius-symbol" class="active">°C</a>|<a
+                  href="#"
+                  id="fahrenheit-symbol"
+                  >°F</a
+                ></span
+              >
             </div>
+            <div class="weather-description-text"></div>
+          </div>
           <div class="col-4 search-panel">
-              <form id="search-city-form">
-                <label for="search-city" class="form-label">Enter the city:</label>
-                <input
-                  class="form-control"
-                  list="datalistOptions"
-                  id="search-city"
-                  placeholder="enter the city..."
-                  autocomplete="off"
-                />
-                <input type="submit" value="Search" class="form control btn btn-primary"/>
-                <button type="button" class="btn btn-success" id="current-button">Current</button>
-              </form>
+            <form id="search-city-form">
+              <label for="search-city" class="form-label"
+                >Enter the city:</label
+              >
+              <input
+                class="form-control"
+                list="datalistOptions"
+                id="search-city"
+                placeholder="enter the city..."
+                autocomplete="off"
+              />
+              <input
+                type="submit"
+                value="Search"
+                class="form control btn btn-primary"
+              />
+              <button type="button" class="btn btn-current" id="current-button">
+                Current
+              </button>
+            </form>
           </div>
         </div>
         <div class="row">
-          <div class="col-4 current-city-date">
+          <div class="col-5 current-city-date">
             <div class="current-city" id="current-city">Mariupol</div>
             <div class="current-date"></div>
           </div>
-            <div class="col-5 detailed-description">
-              <ul class="detailed-list">
-                <li>wind: <span id="wind-value">2</span> km/h</li>
-                <li>humidity: <span id="humidity-value">70</span>%</li>
-                <li>pressure: <span id="pressure-value">760</span> mm.Hg</li>
-              </ul>
-            </div>
-            <div class="col-3 copyright">
-              <img class="copyright-icon" src="images/icon-allweather.png" />
-                <p>Created by<br> Olena Bogusheva</p>
-            </div>
+          <div class="col-4 detailed-description">
+            <ul class="detailed-list">
+              <li>wind: <span id="wind-value">2</span> km/h</li>
+              <li>humidity: <span id="humidity-value">70</span>%</li>
+              <li>pressure: <span id="pressure-value">760</span> mm.Hg</li>
+            </ul>
           </div>
+          <div class="col-3 copyright">
+            <img class="copyright-icon" src="images/icon-allweather.png" />
+            <p>
+              Created by<br />
+              Olena Bogusheva
+            </p>
+          </div>
+        </div>
         <div class="row citate">
           "I love being in a city with great weather..."
         </div>
-        <div class="forecast-wrapper">
-          <div class="row">
-                <div class="col day-name">Mon</div>
-                <div class="col day-name">Tue</div>
-                <div class="col day-name">Wed</div>
-                <div class="col day-name">Thu</div>
-                <div class="col day-name">Fri</div>
-                <div class="col day-name">Sat</div>
-                <div class="col day-name">Sun</div>
-              </div>
-              <div class="row">
-                <div class="col weather-image">
-                  <img class="small-icons" src="images/cloudy-weather.png" />
-                </div>
-                <div class="col weather-image">
-                  <img class="small-icons" src="images/rainy.png" />
-                </div>
-                <div class="col weather-image">
-                  <img class="small-icons" src="images/cloudy-weather.png" />
-                </div>
-                <div class="col weather-image">
-                  <img class="small-icons" src="images/rainy.png" />
-                </div>
-                <div class="col weather-image">
-                  <img class="small-icons" src="images/cloudy-weather.png" />
-                </div>
-                <div class="col weather-image">
-                  <img class="small-icons" src="images/sunny-weather.png" />
-                </div>
-                <div class="col weather-image">
-                  <img class="small-icons" src="images/sunny-weather.png" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col day-temperature">22°</div>
-                <div class="col day-temperature">24°</div>
-                <div class="col day-temperature">20°</div>
-                <div class="col day-temperature">19°</div>
-                <div class="col day-temperature">23°</div>
-                <div class="col day-temperature">25°</div>
-                <div class="col day-temperature">26°</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="forecast-wrapper" id="forecast"></div>
       </div>
-      
-        <p class="my-git-hub">
-          If you want to see my source code: <a href="https://github.com/bogusheva/Weather-project">My GitHub repo</a>
-        </p>
+      <p class="my-git-hub">
+        If you want to see my source code:
+        <a href="https://github.com/bogusheva/Weather-project"
+          >My GitHub repo</a
+        >
+      </p>
     </div>
-    
+
     <script src="src/app.js"></script>
   </body>
 </html>
-
