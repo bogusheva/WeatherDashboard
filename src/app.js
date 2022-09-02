@@ -78,7 +78,10 @@ function changeToCelsius(event) {
 }
 
 function searchCity(event) {
+  celsiusDegree.classList.add("active");
+  fahrenheitDegree.classList.remove("active");
   event.preventDefault();
+
   let searchInput = document.querySelector("#search-city");
   let currentCity = document.querySelector(".current-city");
   let cityName = searchInput.value;
@@ -159,6 +162,8 @@ function findPosition(position) {
 }
 
 function getCurrentPosition() {
+  celsiusDegree.classList.add("active");
+  fahrenheitDegree.classList.remove("active");
   navigator.geolocation.getCurrentPosition(findPosition);
 }
 
@@ -176,7 +181,9 @@ let celsiusTemperature = null;
 let searchForm = document.querySelector("#search-city-form");
 searchForm.addEventListener("submit", searchCity);
 let inputForm = document.querySelector("#search-city");
-inputForm.addEventListener("focus", cleanValue);
+inputForm.addEventListener("focus", (e) => {
+  cleanValue();
+});
 let fahrenheitDegree = document.querySelector("#fahrenheit-symbol");
 let celsiusDegree = document.querySelector("#celsius-symbol");
 fahrenheitDegree.addEventListener("click", changeToFahrenheit);
