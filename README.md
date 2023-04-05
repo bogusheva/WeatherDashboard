@@ -1,6 +1,7 @@
 # Weather Dashboard
 
 This is my final project after studying Frontend Development Course "SheCodes Plus". A web application that allows users to search for and view current weather conditions and forecasts for different locations, including current user location.
+You can see more here: [Weather Dashboard](https://astonishing-tiramisu-921a88.netlify.app)
 
 # Technologies
 
